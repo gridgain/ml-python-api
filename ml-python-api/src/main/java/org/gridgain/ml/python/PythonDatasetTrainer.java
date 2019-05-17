@@ -85,6 +85,7 @@ public class PythonDatasetTrainer<M extends IgniteModel> {
      * Trains model of cached data.
      *
      * @param cache Ignite cache.
+     * @param filter Filter.
      * @param preprocessor Preprocessor.
      * @return Model.
      */
