@@ -39,6 +39,7 @@ public class PythonModelSaver {
      *
      * @param mdl Model.
      * @param dst File destination.
+     * @param ignite Ignite instance.
      * @throws IOException If the model cannot be serialized or written.
      */
     public static void save(IgniteModel<double[], Double> mdl, String dst, Ignite ignite) throws IOException {
@@ -64,6 +65,7 @@ public class PythonModelSaver {
      * Reads model from file.
      *
      * @param src Model source.
+     * @param ignite Ignite instance.
      * @return Model.
      * @throws IOException If model cannot be read.
      * @throws ClassNotFoundException If model cannot be deserialized.
