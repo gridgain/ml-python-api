@@ -23,26 +23,27 @@ import sys
 import numpy as np
 from py4j.java_gateway import JavaGateway
 
-ignite_home = os.environ['IGNITE_HOME']
+if 'IGNITE_HOME' in os.environ:
+    ignite_home = os.environ['IGNITE_HOME']
 
-libs_jar = []
-for f in os.listdir(ignite_home + '/libs'):
-    if f.endswith('.jar'):
-        libs_jar.append(ignite_home + '/libs/' + f)    
-    if os.path.isdir(ignite_home + '/libs/' + f):
-        for fi in os.listdir(ignite_home + '/libs/' + f):
-            if fi.endswith('.jar'):
-                libs_jar.append(ignite_home + '/libs/' + f + '/' + fi)
-
-optional_libs_jar = []
-for opt in os.listdir(ignite_home + '/libs/optional'):
-    for f in os.listdir(ignite_home + '/libs/optional/' + opt):
+    libs_jar = []
+    for f in os.listdir(ignite_home + '/libs'):
         if f.endswith('.jar'):
-            optional_libs_jar.append(ignite_home + '/libs/optional/' + opt + '/' + f)
+            libs_jar.append(ignite_home + '/libs/' + f)    
+        if os.path.isdir(ignite_home + '/libs/' + f):
+            for fi in os.listdir(ignite_home + '/libs/' + f):
+                if fi.endswith('.jar'):
+                    libs_jar.append(ignite_home + '/libs/' + f + '/' + fi)
 
-classpath = ':'.join(libs_jar + optional_libs_jar)
+    optional_libs_jar = []
+    for opt in os.listdir(ignite_home + '/libs/optional'):
+        for f in os.listdir(ignite_home + '/libs/optional/' + opt):
+            if f.endswith('.jar'):
+                optional_libs_jar.append(ignite_home + '/libs/optional/' + opt + '/' + f)
 
-gateway = JavaGateway.launch_gateway(classpath=classpath, die_on_exit=True)
+    classpath = ':'.join(libs_jar + optional_libs_jar)
+
+    gateway = JavaGateway.launch_gateway(classpath=classpath, die_on_exit=True)
 
 class Utils:
     """Util class.
