@@ -1,1 +1,2 @@
+-r python/requirements/docs.txt
 python/
