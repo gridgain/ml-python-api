@@ -51,8 +51,8 @@ If you want to run tests, examples or build documentation, clone the whole repos
 
 ::
 
-$ git clone git@github.com:apache/ignite.git
-$ cd ignite/modules/ml/python
+$ git clone git@github.com:gridgain/ml-python-api.git
+$ cd python
 $ pip install -e .
 
 This will install the repository version of *ggml* into your environment in so-called “develop” or “editable” mode. You may read more about `editable installs`_ in the pip manual.
