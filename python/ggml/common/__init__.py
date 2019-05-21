@@ -44,6 +44,8 @@ if 'IGNITE_HOME' in os.environ:
     classpath = ':'.join(libs_jar + optional_libs_jar)
 
     gateway = JavaGateway.launch_gateway(classpath=classpath, die_on_exit=True)
+else:
+    gateway = None
 
 class Utils:
     """Util class.
