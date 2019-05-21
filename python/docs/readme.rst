@@ -31,6 +31,7 @@ Prerequisites
 
 - *Python 3.4* or above (3.6 is tested),
 - IGNITE_HOME environment variable with path to Apache Ignite.
+- Apache Ignite should includea *ml-python-api.jar* in *libs* folder. The *ml-python-api.jar* could be built using this repository.
 
 Installation
 ------------
