@@ -45,6 +45,7 @@ if 'IGNITE_HOME' in os.environ:
 
     gateway = JavaGateway.launch_gateway(classpath=classpath, die_on_exit=True)
 else:
+    # To build documentation.
     gateway = None
 
 class Utils:
@@ -101,8 +102,9 @@ class LearningEnvironmentBuilder(Proxy):
     def __init__(self):
         """Constructs a new instance of learning environemtn builder.
         """
-        java_proxy = gateway.jvm.org.apache.ignite.ml.environment.LearningEnvironmentBuilder.defaultBuilder()
-        Proxy.__init__(self, java_proxy)
+        if gateway:
+            java_proxy = gateway.jvm.org.apache.ignite.ml.environment.LearningEnvironmentBuilder.defaultBuilder()
+            Proxy.__init__(self, java_proxy)
 
 class Model(Proxy):
     """Model.
