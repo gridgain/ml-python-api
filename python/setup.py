@@ -75,8 +75,8 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type='text/markdown',
     url=(
-        'https://github.com/apache/ignite/tree/master'
-        '/modules/ml/python'
+        'https://github.com/gridgain/ml-python-api/tree/master'
+        '/python'
     ),
     packages=setuptools.find_packages(),
     install_requires=requirements['install'],
