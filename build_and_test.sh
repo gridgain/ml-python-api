@@ -14,7 +14,8 @@ cp ../../../../../ml-python-api/target/ml-python-api-1.0-SNAPSHOT.jar ./
 cd ..
 export IGNITE_HOME=`pwd`
 cd ../../../../python
+pip3 install -r requirements/install.txt
+p3 install -r requirements/tests.txt
 pip3 install .
-python3 -m unittest tests/test_classification.py
-python3 -m unittest tests/test_regression.py
-python3 -m unittest tests/test_clustering.py
+python3 -m unittest tests/test_classification.py tests/test_regression.py tests/test_clustering.py
+exit $?
