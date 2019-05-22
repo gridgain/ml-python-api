@@ -1,0 +1,4 @@
+# these pip packages are necessary for the pyignite to run
+
+py4j==0.10.8.1
+pandas==0.24.2
