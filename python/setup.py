@@ -67,7 +67,7 @@ with open('README.md', 'r', encoding='utf-8') as readme_file:
 
 setuptools.setup(
     name='ggml',
-    version='0.0.1',
+    version='0.0.3',
     python_requires='>={}.{}'.format(*PYTHON_REQUIRED),
     author='Anton Dmitriev',
     author_email='dmitrievanthony@gmail.com',
