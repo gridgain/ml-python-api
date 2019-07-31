@@ -130,8 +130,8 @@ class KNNClassificationTrainer(ClassificationTrainer):
 class LogRegClassificationTrainer(ClassificationTrainer):
     """LogisticRegression classification trainer.
     """
-    def __init__(self, env_builder=LearningEnvironmentBuilder(), max_iter=100,
-                 batch_size=100, max_loc_iter=100, seed=1234):
+    def __init__(self, env_builder=LearningEnvironmentBuilder(), max_iter=100.0,
+                 batch_size=100.0, max_loc_iter=100.0, seed=1234):
         """Constructs a new instance of LogisticRegression classification trainer.
 
         Parameters
