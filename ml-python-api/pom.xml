@@ -28,7 +28,7 @@
     <properties>
         <maven.javadoc.plugin.version>2.10.4</maven.javadoc.plugin.version>
         <maven.checkstyle.plugin.version>3.0.0</maven.checkstyle.plugin.version>
-        <checkstyle.puppycrawl.version>8.19</checkstyle.puppycrawl.version>
+        <checkstyle.puppycrawl.version>8.29</checkstyle.puppycrawl.version>
     </properties>
 
     <groupId>org.gridgain</groupId>
